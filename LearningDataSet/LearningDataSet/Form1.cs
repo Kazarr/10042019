@@ -17,6 +17,7 @@ namespace LearningDataSet
         public Form1()
         {
             InitializeComponent();
+            grdDataSet.AutoGenerateColumns = false;
             grdDataSet.DataSource = FillDataset();
             grdDataSet.DataMember = "Person";
         }

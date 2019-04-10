@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.grdDataSet = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.grdDataSet)).BeginInit();
             this.SuspendLayout();
             // 
@@ -38,10 +39,18 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.grdDataSet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdDataSet.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1});
             this.grdDataSet.Location = new System.Drawing.Point(13, 13);
             this.grdDataSet.Name = "grdDataSet";
             this.grdDataSet.Size = new System.Drawing.Size(775, 425);
             this.grdDataSet.TabIndex = 0;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "Name";
+            this.Column1.HeaderText = "Column1";
+            this.Column1.Name = "Column1";
             // 
             // Form1
             // 
@@ -59,6 +68,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView grdDataSet;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
     }
 }
 
