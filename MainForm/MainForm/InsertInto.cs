@@ -48,9 +48,9 @@ namespace MainForm
             using (SqlCommand command = new SqlCommand())
             {
                 command.Connection = _connection;
-                command.CommandText = "Select Max(BusinessEntityID) from Person.Person";
+                command.CommandText = "Select Max(BusinessEntityID) from Person.BusinessEntity";
                 int maxId = (int)command.ExecuteScalar();
-                return maxId + 1;
+                return maxId;
             }
         }
     }

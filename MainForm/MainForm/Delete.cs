@@ -19,15 +19,29 @@ namespace MainForm
         {
             try
             {
+                _connection.Open();
                 using (_connection)
                 {
-                    _connection.Open();
                     try
                     {
                         using(SqlCommand command = new SqlCommand())
                         {
                             command.Connection = _connection;
                             command.CommandText = "DELETE from Person.Person where BusinessEntityID = @Id";
+                            command.Parameters.Add("@Id", SqlDbType.Int).Value = id;
+                            command.ExecuteNonQuery();
+                        }
+                    }
+                    catch
+                    {
+
+                    }
+                    try
+                    {
+                        using (SqlCommand command = new SqlCommand())
+                        {
+                            command.Connection = _connection;
+                            command.CommandText = "DELETE from Person.BusinessEntity where BusinessEntityID = @Id";
                             command.Parameters.Add("@Id", SqlDbType.Int).Value = id;
                             command.ExecuteNonQuery();
                         }
