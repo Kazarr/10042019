@@ -15,12 +15,14 @@ namespace MainForm
     {
         public InsertInto Insert { get; set; }
         public Update Update { get; set; }
+        public Delete Delete { get; set; }
         public Form1()
         {
             InitializeComponent();
             SqlConnection ConnectionString = new SqlConnection("Server = KARDOS\\SQLEXPRESSKARDY; Database = AdventureWorks; Trusted_Connection = True");
             Insert = new InsertInto(ConnectionString);
             Update = new Update(ConnectionString);
+            Delete = new Delete(ConnectionString);
         }
 
         private void btnInsert_Click(object sender, EventArgs e)
@@ -31,6 +33,11 @@ namespace MainForm
         private void btnUpdate_Click(object sender, EventArgs e)
         {
             Update.ExecuteUpdate(int.Parse(txtId.Text), txtUpdateFirstName.Text, txtUpdateLastName.Text);
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            Delete.ExecuteDelete(int.Parse(txtDeleteId.Text));
         }
     }
 }

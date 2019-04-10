@@ -40,6 +40,9 @@
             this.txtUpdateLastName = new System.Windows.Forms.TextBox();
             this.lblUpdateFirstName = new System.Windows.Forms.Label();
             this.lblUpdateLastName = new System.Windows.Forms.Label();
+            this.txtDeleteId = new System.Windows.Forms.TextBox();
+            this.btnDelete = new System.Windows.Forms.Button();
+            this.lblDeleteId = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtInsertFirstName
@@ -142,11 +145,40 @@
             this.lblUpdateLastName.TabIndex = 13;
             this.lblUpdateLastName.Text = "Last name";
             // 
+            // txtDeleteId
+            // 
+            this.txtDeleteId.Location = new System.Drawing.Point(12, 254);
+            this.txtDeleteId.Name = "txtDeleteId";
+            this.txtDeleteId.Size = new System.Drawing.Size(100, 20);
+            this.txtDeleteId.TabIndex = 14;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(196, 252);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 15;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
+            // 
+            // lblDeleteId
+            // 
+            this.lblDeleteId.AutoSize = true;
+            this.lblDeleteId.Location = new System.Drawing.Point(119, 257);
+            this.lblDeleteId.Name = "lblDeleteId";
+            this.lblDeleteId.Size = new System.Drawing.Size(16, 13);
+            this.lblDeleteId.TabIndex = 16;
+            this.lblDeleteId.Text = "Id";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblDeleteId);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.txtDeleteId);
             this.Controls.Add(this.lblUpdateLastName);
             this.Controls.Add(this.lblUpdateFirstName);
             this.Controls.Add(this.txtUpdateLastName);
@@ -179,6 +211,9 @@
         private System.Windows.Forms.TextBox txtUpdateLastName;
         private System.Windows.Forms.Label lblUpdateFirstName;
         private System.Windows.Forms.Label lblUpdateLastName;
+        private System.Windows.Forms.TextBox txtDeleteId;
+        private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Label lblDeleteId;
     }
 }
 
